@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Alpha Structure Capital</title>
+  <meta name="description" content="Contact Alpha Structure Capital for investor, media, vendor, or general inquiries.">
+  <meta property="og:title" content="Contact | Alpha Structure Capital">
+  <meta property="og:description" content="Contact Alpha Structure Capital for investor, media, vendor, or general inquiries.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/og-image.png">
+  <!-- CANONICAL URL — uncomment and set after the production domain is confirmed:
+  <link rel="canonical" href="https://REPLACE-WITH-PRODUCTION-DOMAIN/contact.html"> -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="announcement">Private investment opportunities for verified accredited investors. Additional eligibility requirements apply.</div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Alpha Structure Capital — home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-line1">ALPHA STRUCTURE</span>
+          <span class="brand-line2">CAPITAL</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Main">
+        <a class="nav-link" href="strategy.html">Strategy</a>
+        <a class="nav-link" href="investment-process.html">Process</a>
+        <a class="nav-link" href="risk-management.html">Risk Management</a>
+        <a class="nav-link" href="firm.html">Firm</a>
+        <a class="nav-link" href="insights.html">Insights</a>
+        <a class="nav-link" href="investor-access.html">Investor Access</a>
+      </nav>
+      <div class="header-actions">
+        <a class="login-link" href="investor-login.html">Investor Login</a>
+        <a class="btn btn-gold btn-sm" href="investor-access.html">REQUEST INVESTOR MATERIALS</a>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">☰</button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Main menu">
+      <a class="" href="strategy.html">Strategy</a>
+      <a class="" href="investment-process.html">Process</a>
+      <a class="" href="risk-management.html">Risk Management</a>
+      <a class="" href="firm.html">Firm</a>
+      <a class="" href="insights.html">Insights</a>
+      <a class="" href="investor-access.html">Investor Access</a>
+      <a href="investor-login.html">Investor Login</a>
+      <a class="btn btn-gold" href="investor-access.html">REQUEST INVESTOR MATERIALS</a>
+    </nav>
+  </header>
+  <main id="main">
+
+    <section class="section-lg bg-gradient on-dark" data-screen-label="Contact Hero">
+      <div class="container-sm">
+        <div class="eyebrow"><span class="eyebrow-rule" style="width:36px"></span><span class="eyebrow-text">CONTACT</span></div>
+        <h1 class="page-title">Contact Alpha Structure Capital</h1>
+        <p class="lede" style="max-width: 720px;">For general, media, or vendor inquiries, use the form below. Prospective investors should use the <a class="link-gold" href="investor-access.html">Investor Access</a> page.</p>
+      </div>
+    </section>
+
+    <section class="section bg-ivory" data-screen-label="Contact Form">
+      <div class="container-xs" style="max-width: 720px;">
+        <!-- BUSINESS ADDRESS: pending verification — do not publish unverified addresses.
+             CONTACT EMAIL: pending verification — do not publish unverified addresses.
+             INTEGRATION REQUIRED BEFORE LAUNCH: secure server-side form handler (set in
+             assets/js/config.js), server-side validation, spam protection / rate limiting. -->
+        <form class="form-card" data-endpoint="contactFormEndpoint" novalidate>
+          <div class="form-stack">
+            <div class="form-status" aria-live="polite"></div>
+            <div class="form-row">
+              <label class="field" for="ct-name">Name
+                <input id="ct-name" name="name" type="text" required autocomplete="name">
+                <span class="field-error">Please enter your name.</span>
+              </label>
+              <label class="field" for="ct-email">Email
+                <input id="ct-email" name="email" type="email" required autocomplete="email">
+                <span class="field-error">Please enter a valid email address.</span>
+              </label>
+            </div>
+            <label class="field" for="ct-org">Organization (optional)
+              <input id="ct-org" name="organization" type="text" autocomplete="organization">
+            </label>
+            <label class="field" for="ct-category">Inquiry category
+              <select id="ct-category" name="category" required>
+                <option value="">Select&hellip;</option>
+                <option>General</option>
+                <option>Investor inquiry</option>
+                <option>Media</option>
+                <option>Vendor / service provider</option>
+                <option>Other</option>
+              </select>
+              <span class="field-error">Please select a category.</span>
+            </label>
+            <label class="field" for="ct-message">Message
+              <textarea id="ct-message" name="message" rows="5" required></textarea>
+              <span class="field-error">Please enter a message.</span>
+            </label>
+            <label class="check">
+              <input name="consent" type="checkbox" required>
+              <span>I have read the <a class="link-gold" href="privacy-policy.html">Privacy Policy</a> and consent to the processing of this inquiry. (Required)</span>
+              <span class="field-error">Required.</span>
+            </label>
+            <button class="btn btn-green" type="submit">SEND MESSAGE</button>
+          </div>
+        </form>
+        <div class="callout-side" style="margin-top: 24px;">
+          <div class="callout-label">FRAUD-PREVENTION NOTICE</div>
+          <p class="prose" style="margin: 0; font-size: 14px;">Alpha Structure Capital will not provide or change wire instructions through ordinary email or social media. Independently verify all funding instructions through established secure procedures.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <!-- REQUIRED BEFORE LAUNCH (verified facts only — do not invent):
+         1. Legal entity name of the management company
+         2. Business address
+         3. Contact email
+         4. Adviser registration or exemption language (per securities counsel)
+         5. Form ADV link, only if applicable
+         See CONTENT-REQUIRED-BEFORE-LAUNCH.md -->
+    <div class="container">
+      <div class="footer-top">
+        <a class="brand" href="index.html" aria-label="Alpha Structure Capital — home">
+          <span class="brand-mark small" aria-hidden="true"></span>
+          <span class="brand-text">
+            <span class="brand-line1" style="font-size: 17px;">ALPHA STRUCTURE</span>
+            <span class="brand-line2" style="font-size: 9px;">CAPITAL</span>
+          </span>
+        </a>
+        <nav class="footer-cols" aria-label="Footer">
+          <div class="footer-col">
+            <span class="footer-col-label">FIRM</span>
+            <a href="strategy.html">Strategy</a>
+            <a href="investment-process.html">Investment Process</a>
+            <a href="risk-management.html">Risk Management</a>
+            <a href="firm.html">Firm</a>
+            <a href="insights.html">Insights</a>
+          </div>
+          <div class="footer-col">
+            <span class="footer-col-label">INVESTORS</span>
+            <a href="investor-access.html">Investor Access</a>
+            <a href="investor-login.html">Investor Login</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-col">
+            <span class="footer-col-label">LEGAL</span>
+            <a href="disclosures.html">Disclosures</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-use.html">Terms of Use</a>
+          </div>
+        </nav>
+      </div>
+      <p class="footer-legal first">Alpha Structure Capital provides information on this website for informational purposes only. Nothing on this website constitutes investment, legal, accounting, or tax advice, or an offer to sell or a solicitation of an offer to purchase any security. Any offering will be made only through definitive offering documents and only to investors who satisfy all applicable eligibility requirements.</p>
+      <p class="footer-legal">Investing involves substantial risk, including possible loss of principal. No representation is made that any investment objective will be achieved. Past performance, if presented, is not indicative of future results.</p>
+      <p class="footer-legal">Any private fund interests offered through general solicitation may be sold only to investors whose accredited-investor status has been verified and who satisfy all additional requirements applicable to the offering.</p>
+      <p class="footer-copyright">© <span id="footer-year">2026</span> Alpha Structure Capital. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+  <!-- FORM INTEGRATION: copy assets/js/config.example.js to assets/js/config.js,
+       set real endpoints, and uncomment the config.js script tag below.
+  <script src="assets/js/config.js" defer></script> -->
+  <script src="assets/js/forms.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace REPLACE-WITH-PRODUCTION-DOMAIN with the confirmed production domain before launch. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://REPLACE-WITH-PRODUCTION-DOMAIN/</loc></url>
+  <url><loc>https://REPLACE-WITH-PRODUCTION-DOMAIN/strategy.html</loc></url>
+  <url><loc>https://REPLACE-WITH-PRODUCTION-DOMAIN/investment-process.html</loc></url>
+  <url><loc>https://REPLACE-WITH-PRODUCTION-DOMAIN/risk-management.html</loc></url>
+  <url><loc>https://REPLACE-WITH-PRODUCTION-DOMAIN/firm.html</loc></url>
+  <url><loc>https://REPLACE-WITH-PRODUCTION-DOMAIN/insights.html</loc></url>
+  <url><loc>https://REPLACE-WITH-PRODUCTION-DOMAIN/articles/understanding-spac-yield-to-worst.html</loc></url>
+  <url><loc>https://REPLACE-WITH-PRODUCTION-DOMAIN/articles/why-time-matters-event-driven-investing.html</loc></url>
+  <url><loc>https://REPLACE-WITH-PRODUCTION-DOMAIN/articles/structural-alpha-versus-market-direction.html</loc></url>
+  <url><loc>https://REPLACE-WITH-PRODUCTION-DOMAIN/investor-access.html</loc></url>
+  <url><loc>https://REPLACE-WITH-PRODUCTION-DOMAIN/contact.html</loc></url>
+  <url><loc>https://REPLACE-WITH-PRODUCTION-DOMAIN/disclosures.html</loc></url>
+  <url><loc>https://REPLACE-WITH-PRODUCTION-DOMAIN/privacy-policy.html</loc></url>
+  <url><loc>https://REPLACE-WITH-PRODUCTION-DOMAIN/terms-of-use.html</loc></url>
+  <url><loc>https://REPLACE-WITH-PRODUCTION-DOMAIN/investor-login.html</loc></url>
+</urlset>

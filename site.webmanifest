@@ -1,0 +1,16 @@
+{
+  "name": "Alpha Structure Capital",
+  "short_name": "ASC",
+  "description": "Alternative investment manager focused on structural inefficiencies with defined catalysts.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#062A20",
+  "theme_color": "#062A20",
+  "icons": [
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
