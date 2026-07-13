@@ -6,5 +6,4 @@ User-agent: *
 Allow: /
 Disallow: /assets/js/config.js
 
-# Set the absolute URL after the production domain is confirmed:
-Sitemap: https://REPLACE-WITH-PRODUCTION-DOMAIN/sitemap.xml
+Sitemap: https://alphastructurecapital.com/sitemap.xml
