@@ -193,7 +193,23 @@ body.menu-locked { overflow: hidden; }
 .bg-white { background: var(--white); }
 .bg-forest { background: var(--forest); }
 .bg-green { background: var(--green); }
-.bg-gradient { background: linear-gradient(135deg, var(--forest) 0%, var(--green) 100%); }
+.bg-gradient {
+  background:
+    radial-gradient(1100px 620px at 82% -10%, rgba(200, 149, 62, 0.10), transparent 62%),
+    radial-gradient(900px 700px at -10% 110%, rgba(11, 61, 46, 0.85), transparent 70%),
+    var(--forest);
+}
+
+/* Subtle hero entrance motion (disabled by the prefers-reduced-motion rule above) */
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+.bg-gradient .eyebrow,
+.bg-gradient h1,
+.bg-gradient .page-title { animation: hero-rise 700ms cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+.bg-gradient .lede,
+.bg-gradient .tri-gold { animation: hero-rise 700ms cubic-bezier(0.22, 0.61, 0.36, 1) 120ms both; }
 .hairline-top { border-top: 1px solid var(--hairline); }
 
 .container { max-width: 1320px; margin: 0 auto; }
