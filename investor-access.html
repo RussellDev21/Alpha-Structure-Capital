@@ -17,6 +17,159 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    /* ---------- Investor Access 2026 redesign (page-scoped) ---------- */
+
+    /* Editorial two-column hero */
+    .ia-hero {
+      background:
+        radial-gradient(1100px 620px at 82% -10%, rgba(200, 149, 62, 0.10), transparent 62%),
+        radial-gradient(900px 700px at -10% 110%, rgba(11, 61, 46, 0.85), transparent 70%),
+        var(--forest);
+      padding: clamp(72px, 8vw, 112px) var(--pad-x);
+      overflow: hidden;
+    }
+    .ia-hero-grid {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      gap: clamp(40px, 5vw, 80px);
+      align-items: center;
+    }
+    @media (max-width: 899px) {
+      .ia-hero-grid { grid-template-columns: 1fr; }
+    }
+    .ia-hero h1 {
+      color: var(--ivory);
+      font-weight: 500;
+      font-size: clamp(40px, 4.8vw, 64px);
+      line-height: 1.06;
+      margin: 0 0 26px;
+      letter-spacing: -0.01em;
+    }
+    .ia-hero .lede { max-width: 620px; }
+    .ia-hero-ctas { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; margin-top: 36px; }
+    .ia-login-link {
+      color: rgba(245, 242, 234, 0.85);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      border-bottom: 1px solid rgba(200, 149, 62, 0.55);
+      padding-bottom: 3px;
+    }
+    .ia-login-link:hover { color: var(--gold-light); border-bottom-color: var(--gold-light); }
+    .ia-trust {
+      margin: 30px 0 0;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      color: rgba(245, 242, 234, 0.55);
+    }
+    .btn.btn-round { border-radius: 999px; }
+
+    /* Elevated image card — clearly separated from the background */
+    .ia-hero-media { position: relative; }
+    .ia-photo-card {
+      display: block;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(200, 149, 62, 0.55);
+      box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.45),
+        0 6px 20px rgba(0, 0, 0, 0.30);
+      background: var(--green);
+    }
+    .ia-photo-card img {
+      display: block;
+      width: 100%;
+      height: clamp(340px, 42vw, 520px);
+      object-fit: cover;
+    }
+    .ia-photo-caption {
+      margin: 16px 4px 0;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: rgba(245, 242, 234, 0.45);
+      text-transform: uppercase;
+    }
+
+    /* Subtle entrance motion (disabled globally by prefers-reduced-motion rule) */
+    @keyframes ia-rise {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: none; }
+    }
+    .ia-rise { animation: ia-rise 700ms cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+    .ia-rise-2 { animation-delay: 120ms; }
+    .ia-rise-3 { animation-delay: 240ms; }
+
+    /* Four-step premium cards */
+    .ia-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .ia-step-card {
+      background: var(--white);
+      border: 1px solid var(--hairline);
+      border-radius: 18px;
+      padding: 34px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+    }
+    .ia-step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(11, 61, 46, 0.12);
+      border-color: rgba(200, 149, 62, 0.5);
+    }
+    .ia-step-index {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 19px;
+      color: var(--gold-dark);
+      letter-spacing: 0.06em;
+    }
+    .ia-step-card h3 { font-weight: 600; font-size: 24px; margin: 0; }
+    .ia-step-card p { font-size: 14.5px; line-height: 1.65; color: var(--muted); margin: 0; }
+
+    /* Form: large ivory card on dark green */
+    .ia-form-section {
+      background:
+        radial-gradient(900px 520px at 50% -20%, rgba(200, 149, 62, 0.08), transparent 65%),
+        var(--forest);
+    }
+    .ia-form-card {
+      background: var(--ivory);
+      border: 1px solid rgba(200, 149, 62, 0.35);
+      border-radius: 24px;
+      padding: clamp(32px, 5vw, 56px);
+      box-shadow: 0 28px 60px rgba(0, 0, 0, 0.35);
+    }
+    .ia-form-kicker {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      color: var(--gold-dark);
+      margin: 0 0 12px;
+    }
+    .ia-form-card .sub-title { color: var(--green); margin-bottom: 10px; }
+    .ia-form-intro { font-size: 15px; line-height: 1.65; color: var(--muted); margin: 0 0 32px; max-width: 560px; }
+    .ia-form-card .field input,
+    .ia-form-card .field select {
+      border-radius: 12px;
+      background: var(--white);
+      padding: 14px 16px;
+      transition: border-color 200ms ease, box-shadow 200ms ease;
+    }
+    .ia-form-card .field input:focus,
+    .ia-form-card .field select:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(200, 149, 62, 0.18);
+      outline: none;
+    }
+    .ia-form-card .form-stack { gap: 22px; }
+    .ia-form-card .btn { border-radius: 999px; align-self: flex-start; padding: 16px 40px; }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -57,44 +210,71 @@
   </header>
   <main id="main">
 
-    <section class="section-lg bg-gradient on-dark" data-screen-label="Access Hero">
-      <div class="container-sm">
-        <div class="eyebrow"><span class="eyebrow-rule" style="width:36px"></span><span class="eyebrow-text">INVESTOR ACCESS</span></div>
-        <h1 class="page-title">Begin a confidential conversation.</h1>
-        <p class="lede" style="max-width: 720px;">Prospective investors may request general firm and strategy information. Access to offering materials follows eligibility review and verification. Submitting an inquiry does not constitute acceptance as an investor or a commitment by either party.</p>
+    <section class="ia-hero on-dark" data-screen-label="Access Hero">
+      <div class="ia-hero-grid">
+        <div class="ia-hero-copy">
+          <div class="eyebrow ia-rise"><span class="eyebrow-rule" style="width:36px"></span><span class="eyebrow-text">INVESTOR ACCESS</span></div>
+          <h1 class="ia-rise">A private path to structural opportunity.</h1>
+          <p class="lede ia-rise ia-rise-2">Prospective investors may request general firm and strategy information. Access to offering materials follows eligibility review and verification. Submitting an inquiry does not constitute acceptance as an investor or a commitment by either party.</p>
+          <div class="ia-hero-ctas ia-rise ia-rise-2">
+            <a class="btn btn-gold btn-round" href="#request-form">REQUEST INVESTOR MATERIALS</a>
+            <a class="ia-login-link" href="investor-login.html">Existing Investor Login</a>
+          </div>
+          <p class="ia-trust ia-rise ia-rise-3">Secure review &middot; Independent verification &middot; Confidential access</p>
+        </div>
+        <div class="ia-hero-media ia-rise ia-rise-3">
+          <div class="ia-photo-card">
+            <img src="assets/images/hero-cityscape.png" alt="City skyline at dusk, viewed from a high floor" loading="eager">
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section bg-ivory" data-screen-label="Access Process">
-      <div class="container-sm">
-        <h2 class="sub-title" style="margin-bottom: 40px;">How the process works</h2>
-        <div class="stage-list">
-          <div class="stage" style="padding: 20px 0;"><div class="step-num" style="width: 36px; height: 36px;" aria-hidden="true"><span style="font-size: 13px;">1</span></div><p class="prose" style="margin: 6px 0 0;">Submit an inquiry through this page.</p></div>
-          <div class="stage" style="padding: 20px 0;"><div class="step-num" style="width: 36px; height: 36px;" aria-hidden="true"><span style="font-size: 13px;">2</span></div><p class="prose" style="margin: 6px 0 0;">Complete preliminary eligibility information.</p></div>
-          <div class="stage" style="padding: 20px 0;"><div class="step-num" style="width: 36px; height: 36px;" aria-hidden="true"><span style="font-size: 13px;">3</span></div><p class="prose" style="margin: 6px 0 0;">Accredited-investor verification through an independent process.</p></div>
-          <div class="stage" style="padding: 20px 0;"><div class="step-num" style="width: 36px; height: 36px;" aria-hidden="true"><span style="font-size: 13px;">4</span></div><p class="prose" style="margin: 6px 0 0;">Additional qualified-client or qualified-purchaser review where applicable.</p></div>
-          <div class="stage" style="padding: 20px 0;"><div class="step-num" style="width: 36px; height: 36px;" aria-hidden="true"><span style="font-size: 13px;">5</span></div><p class="prose" style="margin: 6px 0 0;">Secure access to offering materials for eligible investors.</p></div>
-          <div class="stage" style="padding: 20px 0;"><div class="step-num" style="width: 36px; height: 36px;" aria-hidden="true"><span style="font-size: 13px;">6</span></div><p class="prose" style="margin: 6px 0 0;">AML/KYC review.</p></div>
-          <div class="stage" style="padding: 20px 0;"><div class="step-num" style="width: 36px; height: 36px;" aria-hidden="true"><span style="font-size: 13px;">7</span></div><p class="prose" style="margin: 6px 0 0;">Subscription review and approval.</p></div>
-          <div class="stage" style="padding: 20px 0;"><div class="step-num" style="width: 36px; height: 36px;" aria-hidden="true"><span style="font-size: 13px;">8</span></div><p class="prose" style="margin: 6px 0 0;">Funding instructions provided only through secure authenticated channels.</p></div>
+      <div class="container-md">
+        <div class="eyebrow"><span class="eyebrow-rule"></span><span class="eyebrow-text">HOW ACCESS WORKS</span></div>
+        <h2 class="sub-title" style="margin-bottom: 44px;">Four stages, each deliberate.</h2>
+        <div class="ia-steps">
+          <div class="ia-step-card">
+            <span class="ia-step-index">I</span>
+            <h3>Request Access</h3>
+            <p>Submit an inquiry through this page and complete preliminary eligibility information. Submitting an inquiry does not constitute acceptance as an investor or a commitment by either party.</p>
+          </div>
+          <div class="ia-step-card">
+            <span class="ia-step-index">II</span>
+            <h3>Eligibility Review</h3>
+            <p>Accredited-investor verification through an independent process, with additional qualified-client or qualified-purchaser review where applicable. Self-certification alone is generally not sufficient.</p>
+          </div>
+          <div class="ia-step-card">
+            <span class="ia-step-index">III</span>
+            <h3>Secure Due Diligence</h3>
+            <p>Eligible investors receive secure, authenticated access to offering materials, alongside AML/KYC review. Materials are never distributed as public downloads or ordinary email attachments.</p>
+          </div>
+          <div class="ia-step-card">
+            <span class="ia-step-index">IV</span>
+            <h3>Subscription &amp; Onboarding</h3>
+            <p>Subscription review and approval, followed by funding instructions provided only through secure authenticated channels&mdash;never through ordinary email or social media.</p>
+          </div>
         </div>
-        <div class="callout-side" style="margin-top: 40px;">
+        <div class="callout-side" style="margin-top: 44px; border-radius: 14px;">
           <div class="callout-label">FRAUD-PREVENTION NOTICE</div>
           <p class="prose" style="margin: 0; font-size: 15px;">Alpha Structure Capital will not provide or change wire instructions through ordinary email or social media. Prospective investors should independently verify all funding instructions through established secure procedures.</p>
         </div>
       </div>
     </section>
 
-    <section class="section bg-forest on-dark" data-screen-label="Inquiry Form">
-      <div class="container-xs" style="max-width: 720px;">
-        <h2 class="sub-title" style="margin-bottom: 32px;">Request Investor Materials</h2>
+    <section class="section ia-form-section on-dark" id="request-form" data-screen-label="Inquiry Form">
+      <div class="container-xs" style="max-width: 760px;">
         <!-- INTEGRATION REQUIRED BEFORE LAUNCH (see PRODUCTION-READINESS-CHECKLIST.md):
              1. Secure server-side form handler / CRM endpoint (set in assets/js/config.js)
              2. Server-side validation and sanitization of all fields
              3. Spam protection / rate limiting (e.g. Turnstile — key in config.js)
              4. Encrypted transport and minimal internal notification
              5. Human compliance review of every submission — no automated approvals -->
-        <form class="form-card" data-endpoint="investorFormEndpoint" novalidate>
+        <form class="ia-form-card" data-endpoint="investorFormEndpoint" novalidate>
+          <p class="ia-form-kicker">STEP I &middot; REQUEST ACCESS</p>
+          <h2 class="sub-title">Request Investor Materials</h2>
+          <p class="ia-form-intro">A confidential inquiry begins the eligibility review. A member of the firm will respond through secure channels.</p>
           <div class="form-stack">
             <div class="form-status" aria-live="polite"></div>
             <div class="form-row">
